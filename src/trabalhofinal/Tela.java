@@ -75,6 +75,13 @@ public class Tela extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
+        public static void main (String args[]){
+            java.awt.EventQueue.invokeLater(new Runnable(){
+                public void run(){
+                    new Tela().setVisible(true);
+                } 
+        });    
+        }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel JanelaOpenGL;
