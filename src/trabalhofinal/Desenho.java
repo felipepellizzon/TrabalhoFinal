@@ -53,6 +53,7 @@ public class Desenho implements GLEventListener{
             //Cria um painel e adiciona um ouvinte GLEventListener
             GLJPanel panel = new GLJPanel(capabilities);
             panel.addGLEventListener(this);
+            
             return panel;
             
         }
