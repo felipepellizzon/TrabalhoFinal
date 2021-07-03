@@ -28,6 +28,7 @@ public class Desenho implements GLEventListener{
         
         @Override
 	public void display(GLAutoDrawable glad) {
+            
             GL2 gl = glad.getGL().getGL2();
             gl.glClear(GL.GL_COLOR_BUFFER_BIT);
             gl.glColor3f(1f, 0, 0);
@@ -39,6 +40,37 @@ public class Desenho implements GLEventListener{
             gl.glFlush();
         }
         
+        private void DesenhoLinha(GL2 gl) {
+		gl.glBegin(GL2.GL_LINES);
+			gl.glVertex2f(25f, 50f);
+			gl.glVertex2f(50f, 0f);
+		gl.glEnd();
+	}
+        
+        private void DesenhoCirculo(GL2 gl) {
+		gl.glBegin(GL2.GL_TRIANGLES);
+			gl.glVertex2f(25f, 50f);
+			gl.glVertex2f(50f, 0f);
+			gl.glVertex2f(0f, 0f);
+		gl.glEnd();
+	}
+        
+        private void DesenhoTriangulo(GL2 gl) {
+		gl.glBegin(GL2.GL_TRIANGLES);
+			gl.glVertex2f(25f, 50f);
+			gl.glVertex2f(50f, 0f);
+			gl.glVertex2f(0f, 0f);
+		gl.glEnd();
+	}
+        
+        private void DesenhoQuadrado(GL2 gl) {
+		gl.glBegin(GL2.GL_QUADS);
+			gl.glVertex2f(25f, 50f);
+			gl.glVertex2f(50f, 0f);
+			gl.glVertex2f(0f, 0f);
+                        gl.glVertex2f(0f, 0f);
+		gl.glEnd();
+	}
 
 	@Override
 	public void reshape(GLAutoDrawable glad, int i, int i1, int i2, int i3) {
